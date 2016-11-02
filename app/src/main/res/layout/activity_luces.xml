@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_actividad6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.atack08.domotica.Luces"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow android:gravity="center_vertical|center_horizontal">
+            <TextView
+                android:text=" SALÓN:"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+            <Switch android:id="@+id/switchLuzSalon"
+                android:checked="false" />
+
+            <ImageView android:id="@+id/imagenLuzSalon"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_bombilla_apagada"/>
+
+        </TableRow>
+
+        <TableRow android:gravity="center_vertical|center_horizontal">
+            <TextView
+                android:text="COCINA:"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+            <Switch android:id="@+id/switchLuzCocina"
+                android:checked="false"
+                />
+
+            <ImageView android:id="@+id/imagenLuzCocina"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_bombilla_apagada"/>
+
+        </TableRow>
+
+        <TableRow android:gravity="center_vertical|center_horizontal">
+            <TextView
+                android:text="BAÑO:"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"/>
+
+            <Switch android:id="@+id/switchLuzBaño"
+                android:checked="false"
+                />
+
+            <ImageView android:id="@+id/imagenLuzBaño"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_bombilla_apagada"/>
+
+        </TableRow>
+
+        <TableRow android:gravity="center_vertical|center_horizontal">
+            <TextView
+                android:text="HALL:"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"/>
+
+            <Switch android:id="@+id/switchLuzHall"
+                android:checked="false"
+                />
+
+            <ImageView android:id="@+id/imagenLuzHall"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_bombilla_apagada"/>
+
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="volver"
+        android:onClick="cerrarVentanaLuces"/>
+</LinearLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.atack08.domotica.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/panel_borde1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button android:id="@+id/botonPrincipalPersianas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Persianas"
+                android:drawableEnd="@mipmap/ic_persiana1"
+                android:onClick="configurarPersianas"/>
+
+            <Button android:id="@+id/botonPrincipalLuces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="luces"
+                android:drawableEnd="@mipmap/ic_luces"
+                android:onClick="configurarLuces"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/botonPrincipalTemperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="temperatura"
+                android:drawableEnd="@mipmap/ic_termometro"
+                android:onClick="configurarTemperatura"/>
+
+            <Button android:id="@+id/botonPrincipalCamaras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="cámaras"
+                android:drawableEnd="@mipmap/ic_camaras"
+                android:onClick="configurarCamaras"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado de la Vivienda"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/panel_borde3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/panel_borde3">
+
+            <LinearLayout android:id="@+id/panelCamaras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salón"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainCamSalon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_camaras"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cocina"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainCamCocina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_camaras"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baño"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainCamBaño"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_camaras"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hall"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainCamHall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_camaras"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/panelLuces"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salón"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainLuzSalon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_bombilla_apagada"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cocina"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainLuzCocina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_bombilla_apagada"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baño"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainLuzBaño"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_bombilla_apagada"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hall"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainLuzHall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_bombilla_apagada"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/panel_borde3">
+
+                <LinearLayout android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temperatura Ambiente"
+                        android:layout_weight="2"
+                        android:textSize="12dp"
+                        android:textAlignment="viewEnd"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_termometro"
+                        android:layout_weight="0.5"/>
+
+                    <TextView android:id="@+id/mainTempAmbiente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22 ºC"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/azulGoogle"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salón"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainPersianaSalon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_persiana0"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cocina"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainPersianaCocina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_persiana25"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baño"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainPersianaBaño"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_persiana100"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hall"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:textSize="9dp"/>
+
+                    <ImageView android:id="@+id/mainPersianaHall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_persiana50"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+
